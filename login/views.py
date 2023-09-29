@@ -8,12 +8,12 @@ from .forms import RegistroForm, IncioSesionForm
 
 # Vista de inicio
 def index(request):
-    return render(request, 'index.html')
+    return render(request, 'paginas/inicio.html')
 
 # Vista de registro de nuevo usuario
 def registro(request):
     if request.method == 'GET':
-        return render(request, 'registro.html',{
+        return render(request, 'paginas/registro.html',{
             'form' : RegistroForm
         })
     if request.method == 'POST':
@@ -23,14 +23,14 @@ def registro(request):
             nuevo_usario.save()
             return redirect('index')
         else:
-            return render(request, 'registro.html', {
+            return render(request, 'paginas/registro.html', {
                 'form' : RegistroForm
             })
 
 # Vista de inicio de sesión
 def iniciar_sesion(request):
     if request.method == 'GET':
-        return render(request,'inicio_sesion.html', {
+        return render(request,'paginas/inicio_sesion.html', {
             'form' : IncioSesionForm
         })
     if request.method == 'POST':
@@ -45,7 +45,7 @@ def iniciar_sesion(request):
             return redirect('index')
         #Devuelve el inicio de sesión informando credenciales incorrectas
         else:
-            return render(request,'inicio_sesion.html',{
+            return render(request,'paginas/inicio_sesion.html',{
                 'form' : IncioSesionForm,
                 'error' : 'Credenciales incorrectas.'
             })

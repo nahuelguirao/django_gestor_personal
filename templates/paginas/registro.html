@@ -1,0 +1,19 @@
+{% extends 'index.html' %}
+
+{% block title %}Registrarse | Taskly {% endblock %}
+
+{% block content %}
+
+<main id="main-form">
+    <div class="container-form">
+        <h1>Registro Taskly</h1>
+        <form method="POST" class="form">
+            {% csrf_token %}
+            {{form.as_div}}
+            <button>Registrarse</button>
+        </form>
+    </div>
+</main>
+
+
+{% endblock %}

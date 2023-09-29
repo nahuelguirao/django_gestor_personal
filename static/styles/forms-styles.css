@@ -1,0 +1,85 @@
+#main-form{
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-form{
+    background-color: #FF6969;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    width: 30%;
+    padding: 20px 30px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.form{
+    width: 100%;
+    padding: 40px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form div input{
+    margin-top: 2%;
+    width: 100%;
+    border-radius: 10px;
+    height: 30px;
+    padding: 5px;
+    border: none;
+    background-color: #FFF5E0;
+}
+
+input:focus{
+    border: solid 5px #141E46;
+}
+
+
+.form button{
+    font-family: 'Kanit', sans-serif;
+    height: 50px;
+    border: none;
+    border-radius: 15px;
+    background-color: #FFF5E0;
+    width: 50%;
+    align-self: center;
+    margin-top: 5%;
+}
+
+.form button:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+@media (max-width: 1200px){
+    .container-form{width: 50%;}
+}
+
+@media (max-width: 720px){
+    .container-form{width: 60%;}
+}
+
+@media (max-width: 480px){
+    .container-form{width: 80%;}
+}
+
+@media (max-width: 360px){
+    .container-form h1{
+        font-size: 1.5rem;
+    }
+
+    .form div input{
+        height: 25px;
+    }
+
+    .form button{
+        width: 70%;
+    }
+}
