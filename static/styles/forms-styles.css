@@ -57,6 +57,11 @@ input:focus{
     cursor: pointer;
 }
 
+@media (max-height: 799px){
+    #main-form{
+        height: 100vh;
+    }
+}
 
 @media (max-width: 1200px){
     .container-form{width: 50%;}
