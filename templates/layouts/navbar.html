@@ -1,9 +1,15 @@
+{% load static %}
+
 <nav>
-    <a href="{% url 'index' %}">Inicio</a>
-    {% if request.user.is_authenticated %}
-    <a href="{% url 'cerrar_sesion' %}">Logout</a>
-    {% else %}
-    <a href="{% url 'registro' %}">Registrarse</a>
-    <a href="{% url 'iniciar_sesion' %}">Login</a>
-    {% endif %}
+    <img src="{% static 'img/icono-taskly.png' %}" alt="Logo Taskly">
+    <img id="img-menu" src="{% static 'img/menu-desplegable.png' %}" alt="Menu icono">
+    <ul id="menu" class="none">
+        <li><a href="{% url 'index' %}">Inicio</a></li>
+        {% if request.user.is_authenticated %}
+        <li><a href="{% url 'cerrar_sesion' %}">Logout</a></li>
+        {% else %}
+        <li><a href="{% url 'registro' %}">Registrarse</a></li>
+        <li><a href="{% url 'iniciar_sesion' %}">Login</a></li>
+        {% endif %}
+    </ul>
 </nav>
