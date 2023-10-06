@@ -7,6 +7,7 @@
         <li><a href="{% url 'index' %}">Inicio</a></li>
         {% if request.user.is_authenticated %}
         <li><a href="{% url 'cerrar_sesion' %}">Logout</a></li>
+        <li><a href="{% url 'crear' %}">Agregar Tarea</a></li>
         {% else %}
         <li><a href="{% url 'registro' %}">Registrarse</a></li>
         <li><a href="{% url 'iniciar_sesion' %}">Login</a></li>
