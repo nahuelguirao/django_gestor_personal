@@ -3,10 +3,12 @@
 {% block title %}Nueva Tarea | Taskly {% endblock %}
 
 {% block content %}
-<h1>AGREGAR TAREA</h1>
-<form method="POST">
-    {% csrf_token %}
-    {{form.as_div}}
-    <button>Crear</button>
-</form>
+<main>
+    <form method="POST" id="form-crear-tarea">
+        <h1 id="h1-agregar-tarea">AGREGAR TAREA</h1>
+        {% csrf_token %}
+        {{form.as_div}}
+        <button>Crear</button>
+    </form>
+</main>
 {% endblock %}

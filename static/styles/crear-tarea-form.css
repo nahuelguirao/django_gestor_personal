@@ -1,0 +1,97 @@
+#h1-agregar-tarea{
+    margin: 5% 0 ;
+}
+
+#form-crear-tarea{
+    width: 30%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FF6969;
+    color: white;
+    border-radius: 50px;
+    padding: 30px 10px;
+    position: relative;
+    top: 100px;
+}
+
+#form-crear-tarea div{
+    margin-bottom: 50px;
+    display: flex;
+    gap: 15px;
+}
+
+#form-crear-tarea button{
+    width: 30%;
+    height: 50px;
+    border-radius: 25px;
+    border-style: none;
+    background-color: #FFF5E0;
+    font-family: 'Kanit', sans-serif;
+    cursor: pointer;
+}
+
+#form-crear-tarea button:hover{
+    transform: scale(1.1);
+}
+
+#form-crear-tarea input{
+    background-color: #FFF5E0;
+    border-style: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#form-crear-tarea div textarea{
+    resize: none;
+    border-style: none;
+    background-color: #FFF5E0;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+@media (max-width: 1500px){
+    #form-crear-tarea{
+        width: 50%;
+    }
+}
+
+@media(max-width: 875px){
+    #form-crear-tarea{
+        width: 70%;
+    }
+}
+
+@media(max-width: 620px){
+    #form-crear-tarea{
+        width: 90%;
+    }
+    
+    #form-crear-tarea div{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #form-crear-tarea input{
+        height: 20px;
+    }
+
+    #form-crear-tarea textarea{
+        max-width: 75%;
+    }
+}
+
+@media (max-width: 320px){
+    #h1-agregar-tarea{
+        font-size: 1.5rem;
+    }
+
+    #form-crear-tarea div{
+        max-width: 120%;
+    }
+
+    #form-crear-tarea button{
+        width: 200px;
+    }
+}
