@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+
+{% block title %} Mis Tareas | {{usuario}} {% endblock %}
+
+{% block content %}
+<h1>Tareas de {{usuario}}</h1>
+{% for tarea in tareas %}
+<div class="card-tarea">
+    <h3>{{ tarea.titulo }}</h3>
+    <p>{{ tarea.descripcion }}</p>
+    <p>{{ tarea.fecha_creacion }}</p>
+</div>
+{% empty %}
+<h3>Aún no creaste tareas, crea una!</h3>
+{% endfor %}
+{% endblock %}

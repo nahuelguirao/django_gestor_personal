@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from .forms import TareaForm
+from .models import Tarea
 
 # Create your views here.
 @login_required
@@ -20,3 +21,12 @@ def crear(request):
             return render(request, 'paginas/nueva_tarea.html', {
             'form' : TareaForm
             })
+
+@login_required
+def leer(request):
+    usuario = request.user
+    tareas = Tarea.objects.filter(user=usuario)
+    return render(request, 'paginas/mis_tareas.html', {
+        'tareas' : tareas,
+        'usuario' : usuario,
+    })
