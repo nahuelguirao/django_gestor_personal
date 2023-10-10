@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required
 from .forms import TareaForm
 from .models import Tarea
 
-# Create your views here.
+# Create Tarea
 @login_required
 def crear(request):
     if request.method == 'GET':
@@ -16,12 +16,13 @@ def crear(request):
             tarea = form.save(commit=False)
             tarea.user = request.user
             tarea.save()
-            return redirect('index')
+            return redirect('leer')
         else:
             return render(request, 'paginas/nueva_tarea.html', {
             'form' : TareaForm
             })
 
+# Read Tarea
 @login_required
 def leer(request):
     usuario = request.user

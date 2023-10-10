@@ -3,14 +3,18 @@
 {% block title %} Mis Tareas | {{usuario}} {% endblock %}
 
 {% block content %}
-<h1>Tareas de {{usuario}}</h1>
-{% for tarea in tareas %}
-<div class="card-tarea">
-    <h3>{{ tarea.titulo }}</h3>
-    <p>{{ tarea.descripcion }}</p>
-    <p>{{ tarea.fecha_creacion }}</p>
-</div>
-{% empty %}
-<h3>Aún no creaste tareas, crea una!</h3>
-{% endfor %}
+<main>
+    <h1>Tareas de <span id="span-usuario">{{usuario}}</span></h1>
+    <section class="container-tareas">
+        {% for tarea in tareas %}
+        <div class="card-tarea">
+            <h3>{{ tarea.titulo }}</h3>
+            <p class="parrafo-descripcion">{{ tarea.descripcion }}</p>
+            <p class="parrafo-fecha">{{ tarea.fecha_creacion }}</p>
+        </div>
+        {% empty %}
+        <h3>Aún no creaste tareas, crea una!</h3>
+        {% endfor %}
+    </section>
+</main>
 {% endblock %}
