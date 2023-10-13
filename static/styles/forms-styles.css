@@ -40,6 +40,23 @@ input:focus{
     border: solid 5px #141E46;
 }
 
+#container-mostrar-contraseña{
+    margin-top: -4%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 5px;
+}
+
+#container-mostrar-contraseña input{
+    display: inline;
+    width: fit-content;
+    margin-top: 3px;
+}
+
+#container-mostrar-contraseña p{
+    margin-right: 10px;
+}
 
 .form button{
     font-family: 'Kanit', sans-serif;
@@ -73,6 +90,7 @@ input:focus{
 
 @media (max-width: 480px){
     .container-form{width: 80%;}
+    #container-mostrar-contraseña p{font-size: 0.7rem;}
 }
 
 @media (max-width: 360px){

@@ -41,7 +41,7 @@ class RegistroForm(UserCreationForm):
         fields = ['first_name','last_name','username','email','password1','password2']
 
 class IncioSesionForm(forms.Form):
-    email = forms.EmailField(widget=forms.EmailInput(attrs={'placeholder' : 'Ingrese su contraseña'}))
+    email = forms.EmailField(widget=forms.EmailInput(attrs={'placeholder' : 'Ingrese su email'}))
     password = forms.CharField(label="Contraseña", widget=forms.PasswordInput(attrs={'placeholder': 'Ingrese su contraseña'}),)
     
     class Meta:

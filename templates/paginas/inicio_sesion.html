@@ -1,5 +1,7 @@
 {% extends 'index.html' %}
 
+{% load static %}
+
 {% block title %}Iniciar Sesión | Taskly{% endblock %}
 
 {% block content %}
@@ -9,11 +11,26 @@
         <h1>Inicio Sesión</h1>
         <form method="POST" class="form">
             {% csrf_token %}
-            {{ form.as_div }}
+            <div class="campo-form">
+                {{ form.email.label_tag }}
+                {{ form.email }}
+            </div>
+            <div class="campo-form">
+                {{ form.password.label_tag }}
+                {{ form.password }}
+            </div>
+            <div class="campo-form" id="container-mostrar-contraseña">
+                <p>Mostrar contraseña </p>
+                <input type="checkbox" id="input-mostrar-contraseña">
+            </div>
             <button>Iniciar sesión</button>
         </form>
         <h4>{{ error }}</h4>
     </div>
 </main>
 
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'scripts/visibilidadPassword.js' %}"></script>
 {% endblock %}
