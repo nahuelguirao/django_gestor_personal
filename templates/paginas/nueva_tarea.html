@@ -1,6 +1,13 @@
 {% extends 'index.html' %}
 
+{% load static %}
+
 {% block title %}Nueva Tarea | Taskly {% endblock %}
+
+{% block style %}
+<!-- ESTILOS CREAR TAREA  -->
+<link rel="stylesheet" href="{% static 'styles/crear-tarea-form.css' %}">
+{% endblock %}
 
 {% block content %}
 <main>

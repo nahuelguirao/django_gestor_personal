@@ -1,6 +1,13 @@
 {% extends 'index.html' %}
 
+{% load static %}
+
 {% block title %} Mis Tareas | {{usuario}} {% endblock %}
+
+{% block style %}
+<!-- ESTILOS LEER TAREA  -->
+<link rel="stylesheet" href="{% static 'styles/leer-tarea.css' %}">
+{% endblock %}
 
 {% block content %}
 <main>
