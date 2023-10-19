@@ -1,9 +1,9 @@
 {% load static %}
 
-<nav>
+<nav id="navbar">
     <img src="{% static 'img/icono-taskly.png' %}" alt="Logo Taskly">
     <img id="img-menu" src="{% static 'img/menu-desplegable.png' %}" alt="Menu icono">
-    <ul id="menu" class="none">
+    <ul id="menu">
         <li><a href="{% url 'index' %}">Inicio</a></li>
         {% if request.user.is_authenticated %}
         <li><a href="{% url 'crear' %}">Agregar Tarea</a></li>
