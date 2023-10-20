@@ -51,3 +51,10 @@ def actualizar(request, id):
         'tarea' : tarea,
         'form' : form,
     })
+
+#Delete Tarea
+@login_required
+def eliminar(request, id):
+    tarea = get_object_or_404(Tarea, id=id)
+    tarea.delete()
+    return redirect('leer')

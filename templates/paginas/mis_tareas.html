@@ -19,11 +19,15 @@
             <h3>{{ tarea.titulo }}</h3>
             <p class="parrafo-descripcion">{{ tarea.descripcion }}</p>
             <p class="parrafo-fecha">{{ tarea.fecha_creacion }}</p>
-            <a href="#">✔ Tarea Completada</a>
+            <a href="{% url 'eliminar' tarea.id %}" class="eliminar-tarea" tarea-id={{tarea.id}}>✔ Tarea Completada</a>
         </div>
         {% empty %}
-        <h3>Aún no creaste tareas, crea una!</h3>
+        <h3>Aún no creaste tareas, creá una!</h3>
         {% endfor %}
     </section>
 </main>
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'scripts/confirmacion.js' %}"></script>
 {% endblock %}
