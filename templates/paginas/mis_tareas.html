@@ -18,6 +18,7 @@
             <h3>{{ tarea.titulo }}</h3>
             <p class="parrafo-descripcion">{{ tarea.descripcion }}</p>
             <p class="parrafo-fecha">{{ tarea.fecha_creacion }}</p>
+            <a href="{% url 'actualizar' tarea.id %}">✎</a>
         </div>
         {% empty %}
         <h3>Aún no creaste tareas, crea una!</h3>

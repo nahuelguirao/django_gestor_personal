@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+
+{% load static %}
+
+{% block title %}Taskly | Editar Tarea{% endblock %}
+
+{% block style%}
+<link rel="stylesheet" href="{% static 'styles/actualizar-tarea.css' %}">
+<!-- Reutilizo estilos del form 'form-crear-tarea' -->
+<link rel="stylesheet" href="{% static 'styles/crear-tarea-form.css' %}">
+{% endblock %}
+
+{% block content %}
+<main>
+    <form method="POST" id="form-crear-tarea">
+        <h1 id="h1-agregar-tarea">ACTUALIZAR TAREA</h1>
+        {% csrf_token %}
+        {{form.as_div}}
+        <button>Acutalizar</button>
+    </form>
+</main>
+{% endblock %}

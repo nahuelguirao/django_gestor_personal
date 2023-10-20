@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from .forms import TareaForm
 from .models import Tarea
@@ -30,4 +30,24 @@ def leer(request):
     return render(request, 'paginas/mis_tareas.html', {
         'tareas' : tareas,
         'usuario' : usuario,
+    })
+
+# Update Tarea
+@login_required
+def actualizar(request, id):
+    tarea = get_object_or_404(Tarea, id=id)
+    
+    if request.method == 'POST':
+        form = TareaForm(request.POST, instance=tarea)
+        if form.is_valid():
+            form.save()
+            return redirect('leer')
+        else:
+            form = TareaForm(instance=tarea)
+    else:
+        form = TareaForm(instance=tarea)
+    
+    return render(request,'paginas/editar_tarea.html', {
+        'tarea' : tarea,
+        'form' : form,
     })
