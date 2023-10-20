@@ -14,6 +14,10 @@ main h1{
     margin-top: 50px;
     padding: 0 50px;
   }
+
+.container-tareas h3{
+    text-align: center;
+}
   
   .card-tarea {
     margin: 0 25px 50px 0; 

@@ -53,7 +53,7 @@ nav img{
     nav.activo{
         position: absolute;
         top: 0;
-        z-index: 100000;
+        z-index: 9999;
         width: 100vw;
         height: 100vh;
         display: grid;
@@ -63,7 +63,7 @@ nav img{
     }
 
     nav ul.activo{
-        width: 50%;
+        width: 80%;
         text-align: center;
         display: flex;
         justify-content: space-evenly;
