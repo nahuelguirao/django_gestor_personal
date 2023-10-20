@@ -15,10 +15,11 @@
     <section class="container-tareas">
         {% for tarea in tareas %}
         <div class="card-tarea">
+            <a href="{% url 'actualizar' tarea.id %}" id="editar-link">✎ Editar</a>
             <h3>{{ tarea.titulo }}</h3>
             <p class="parrafo-descripcion">{{ tarea.descripcion }}</p>
             <p class="parrafo-fecha">{{ tarea.fecha_creacion }}</p>
-            <a href="{% url 'actualizar' tarea.id %}">✎</a>
+            <a href="#">✔ Tarea Completada</a>
         </div>
         {% empty %}
         <h3>Aún no creaste tareas, crea una!</h3>
