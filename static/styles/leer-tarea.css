@@ -58,6 +58,7 @@ main h1{
     margin: 30px 0;
     font-size: 1.5rem;
     word-wrap: break-word;
+    text-align: start;
 }
 
 .parrafo-descripcion{

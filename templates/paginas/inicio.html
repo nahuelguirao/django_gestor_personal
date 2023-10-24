@@ -1,8 +1,16 @@
 {% extends 'index.html' %}
 
+{% load static %}
+
 {% block title %}Inicio | Taskly{% endblock %}
 
+{% block style %}
+<link rel="stylesheet" href="{% static 'styles/inicio.css' %}">
+{% endblock %}
+
 {% block content %}
-<h1>Taskly</h1>
-<p>LLeva un registro de tus tareas pendientes!</p>
+<main id="main-inicio">
+    <h1 id="titulo-inicio">Taskly!</h1>
+    <p>LLeva un registro de tus tareas pendientes</p>
+</main>
 {% endblock %}

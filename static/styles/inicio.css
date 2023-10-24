@@ -1,0 +1,74 @@
+body{
+    animation: cambiarFondo 5s alternate infinite;
+}
+
+#main-inicio{
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 50px;
+}
+
+#titulo-inicio{
+    font-size: 7rem;
+    text-align: center;
+    animation: shake 2s alternate infinite;
+    color: #FFF5E0;
+}
+
+#main-inicio p{
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: 300;
+    color: #FFF5E0;
+}
+
+@media (max-width: 370px){
+    #main-inicio{
+        padding: 0 30px;
+    }
+
+    #titulo-inicio{
+        font-size: 5rem;
+    }
+
+    #main-inicio p{
+        font-size: 1rem;
+    }
+}
+
+@keyframes cambiarFondo {
+    0% {
+        background-color: #faebca;
+    }
+    100% {
+        background-color: #FF6969;
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(5px);
+    }
+}
+
+
+
+
+
+
