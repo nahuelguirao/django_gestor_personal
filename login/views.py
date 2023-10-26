@@ -8,7 +8,9 @@ from .forms import RegistroForm, IncioSesionForm
 
 # Vista de inicio
 def index(request):
-    return render(request, 'paginas/inicio.html')
+    return render(request, 'paginas/inicio.html', {
+        'user' : request.user
+    })
 
 # Vista de registro de nuevo usuario
 def registro(request):

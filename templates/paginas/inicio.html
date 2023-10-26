@@ -13,4 +13,15 @@
     <h1 id="titulo-inicio">Taskly!</h1>
     <p>LLeva un registro de tus tareas pendientes</p>
 </main>
+
+{% if request.user.is_authenticated %}
+<div id="alerta-bienvenida" class="oculto">
+    <h4>Hola denuevo {{user}}!</h4>
+</div>
+{% endif %}
+
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'scripts/alertaBienvenida.js' %}"></script>
 {% endblock %}
