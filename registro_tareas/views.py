@@ -17,6 +17,7 @@ def crear(request):
             tarea = form.save(commit=False)
             tarea.user = request.user
             tarea.save()
+            messages.success(request, 'Tarea creada correctamente!')
             return redirect('leer')
         else:
             return render(request, 'paginas/nueva_tarea.html', {
