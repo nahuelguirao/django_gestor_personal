@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 from .forms import TareaForm
 from .models import Tarea
 
@@ -41,6 +42,7 @@ def actualizar(request, id):
         form = TareaForm(request.POST, instance=tarea)
         if form.is_valid():
             form.save()
+            messages.success(request,'La tarea se actualizó correctamente')
             return redirect('leer')
         else:
             form = TareaForm(instance=tarea)

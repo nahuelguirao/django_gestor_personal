@@ -24,6 +24,13 @@
         {% empty %}
         <h3>Aún no creaste tareas, creá una!</h3>
         {% endfor %}
+        {% if messages %}
+        {% for mensaje in messages %}
+        <div id="alerta-actualizar">
+            <h4>{{mensaje}}</h4>
+        </div>
+        {% endfor %}
+        {% endif %}
     </section>
 </main>
 {% endblock %}
