@@ -12,6 +12,9 @@
 {% block content %}
 <main>
     <h1>Tareas de <span id="span-usuario">{{usuario}}</span></h1>
+    <div class="container-agregar">
+        <h3><a href="{% url 'crear' %}">Agregar tarea +</a></h3>
+    </div>
     <section class="container-tareas">
         {% for tarea in tareas %}
         <div class="card-tarea">
@@ -22,7 +25,7 @@
             <a href="{% url 'eliminar' tarea.id %}" class="eliminar-tarea" tarea-id={{tarea.id}}>✔ Tarea Completada</a>
         </div>
         {% empty %}
-        <h3>Aún no creaste tareas, creá una!</h3>
+        <h3>Aún no creaste tareas, <a href="{% url 'crear' %}">creá una!</a></h3>
         {% endfor %}
         {% if messages %}
         {% for mensaje in messages %}

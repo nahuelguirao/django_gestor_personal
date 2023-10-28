@@ -3,6 +3,25 @@ main h1{
     margin: 50px 0 20px 0;
 }
 
+.container-agregar{
+    display: flex;
+    justify-content: center;
+}
+
+main h3 a{
+    text-align: center;
+    color: #FF6969;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+main h3 a:hover{
+    background-color: #FF6969;
+    color: #FFF5E0;
+}
+
 #span-usuario{
     color: #141E46;
 }
@@ -17,6 +36,10 @@ main h1{
 
 .container-tareas h3{
     text-align: center;
+}
+
+.container-tareas h3 a{
+    color: #FF6969;
 }
   
   .card-tarea {
