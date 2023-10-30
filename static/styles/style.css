@@ -12,3 +12,45 @@ body{
     background-color: #FFF5E0;
     font-family: 'Kanit', sans-serif;
 }
+
+.alerta-creado{
+    background-color: rgb(26, 173, 26);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    position: absolute;
+    top: 15%;
+    right: 5%;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    animation: fadein 3s, fadeout 1s 5s forwards;
+}
+
+.alerta-error{
+    background-color: #C70039;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    position: absolute;
+    top: 15%;
+    right: 5%;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    animation: fadein 3s, fadeout 1s 5s forwards;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

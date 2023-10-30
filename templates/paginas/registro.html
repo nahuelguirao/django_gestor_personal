@@ -12,6 +12,14 @@
 {% block content %}
 
 <main id="main-form">
+    {% if messages %}
+    {% for mensaje in messages %}
+    <div class="alerta-error">
+        <h4>{{mensaje}}</h4>
+    </div>
+    {% endfor %}
+    {% endif %}
+
     <div class="container-form">
         <h1>Registro Taskly</h1>
         <form method="POST" class="form">

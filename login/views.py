@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth import login, logout
 
@@ -23,8 +24,10 @@ def registro(request):
         #Si los datos ingresados son correctos guarda el nuevo usuario y redirecciona
         if nuevo_usario.is_valid():
             nuevo_usario.save()
+            messages.success(request, 'Usuario creado correctamente! Inicie sesión.')
             return redirect('index')
         else:
+            messages.error(request, 'Algo salió mal, intente nuevamente')
             return render(request, 'paginas/registro.html', {
                 'form' : RegistroForm
             })
@@ -57,4 +60,5 @@ def iniciar_sesion(request):
 def cerrar_sesion(request):
     #Cierra la sesión
     logout(request)
+    messages.success(request, 'Hasta luego!')
     return redirect('index')

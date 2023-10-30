@@ -18,6 +18,14 @@
 <body>
     {% include 'layouts/navbar.html' %}
 
+    {% if messages %}
+    {% for mensaje in messages %}
+    <div class="alerta-creado">
+        <h4>{{mensaje}}</h4>
+    </div>
+    {% endfor %}
+    {% endif %}
+
     {% block content %}
     {% endblock %}
 
